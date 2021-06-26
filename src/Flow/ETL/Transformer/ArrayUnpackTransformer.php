@@ -20,19 +20,19 @@ final class ArrayUnpackTransformer implements Transformer
     /**
      * @var string[]
      */
-    private array $skipEntries;
+    private array $skipEntryNames;
 
     private ?string $entryPrefix;
 
     private EntryFactory $entryFactory;
 
     /**
-     * @param string[] $skipEntries
+     * @param string[] $skipEntryNames
      */
-    public function __construct(string $arrayEntryName, array $skipEntries = [], ?string $entryPrefix = null, EntryFactory $entryFactory = null)
+    public function __construct(string $arrayEntryName, array $skipEntryNames = [], ?string $entryPrefix = null, EntryFactory $entryFactory = null)
     {
         $this->arrayEntryName = $arrayEntryName;
-        $this->skipEntries = $skipEntries;
+        $this->skipEntryNames = $skipEntryNames;
         $this->entryFactory = $entryFactory ?? new NativeEntryFactory();
         $this->entryPrefix = $entryPrefix;
     }
@@ -60,7 +60,7 @@ final class ArrayUnpackTransformer implements Transformer
             foreach ($row->valueOf($this->arrayEntryName) as $key => $value) {
                 $entryName = (string) $key;
 
-                if (\in_array($entryName, $this->skipEntries, true)) {
+                if (\in_array($entryName, $this->skipEntryNames, true)) {
                     continue;
                 }
 
