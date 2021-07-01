@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Transformer\Tests\Unit;
 
+use Flow\ETL\CaseStyles;
 use Flow\ETL\Row;
 use Flow\ETL\Rows;
 use Flow\ETL\Transformer\ArrayKeysCaseTransformer;
-use Flow\ETL\Transformer\CaseConverter;
 use PHPUnit\Framework\TestCase;
 
 final class ArrayKeysCaseTransformerTest extends TestCase
@@ -16,7 +16,7 @@ final class ArrayKeysCaseTransformerTest extends TestCase
     {
         $transformer = new ArrayKeysCaseTransformer(
             'arrayEntry',
-            CaseConverter::STYLE_SNAKE
+            CaseStyles::SNAKE
         );
 
         $rows = $transformer->transform(

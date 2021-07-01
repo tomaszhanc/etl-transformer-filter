@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Transformer;
 
+use Flow\ETL\CaseStyles;
 use Flow\ETL\Exception\InvalidArgumentException;
 use Flow\ETL\Exception\RuntimeException;
 use Flow\ETL\Row;
 use Flow\ETL\Rows;
 use Flow\ETL\Transformer;
 use Flow\ETL\Transformer\Factory\NativeEntryFactory;
+use Jawira\CaseConverter\Convert;
 
 /**
  * @psalm-immutable
@@ -20,8 +22,6 @@ final class ArrayKeysCaseTransformer implements Transformer
 
     private string $style;
 
-    private CaseConverter $caseConverter;
-
     private EntryFactory $entryFactory;
 
     public function __construct(
@@ -29,13 +29,17 @@ final class ArrayKeysCaseTransformer implements Transformer
         string $style,
         EntryFactory $entryFactory = null
     ) {
-        if (!\in_array($style, CaseConverter::STYLES, true)) {
-            throw new InvalidArgumentException("Unrecognized style {$style}, please use one of following: " . \implode(', ', CaseConverter::STYLES));
+        /** @psalm-suppress ImpureFunctionCall */
+        if (!\class_exists('Jawira\CaseConverter\Convert')) {
+            throw new RuntimeException("Jawira\CaseConverter\Convert class not found, please add jawira/case-converter dependency to the project first.");
+        }
+
+        if (!\in_array($style, CaseStyles::ALL, true)) {
+            throw new InvalidArgumentException("Unrecognized style {$style}, please use one of following: " . \implode(', ', CaseStyles::ALL));
         }
 
         $this->arrayEntryName = $arrayEntryName;
         $this->style = $style;
-        $this->caseConverter = new CaseConverter();
         $this->entryFactory = $entryFactory ?? new NativeEntryFactory();
     }
 
@@ -75,7 +79,8 @@ final class ArrayKeysCaseTransformer implements Transformer
 
         /** @psalm-suppress MixedAssignment */
         foreach ($array as $key => $value) {
-            $newKey = \is_string($key) ? $this->caseConverter->convert($key, $this->style) : $key;
+            /** @phpstan-ignore-next-line */
+            $newKey = \is_string($key) ? (string) \call_user_func([new Convert($key), 'to' . \ucfirst($this->style)]) : $key;
 
             if (\is_array($value)) {
                 $value = $this->convertArrayKeysCase($value);

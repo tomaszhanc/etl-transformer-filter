@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Transformer\Tests\Unit;
 
+use Flow\ETL\CaseStyles;
 use Flow\ETL\Exception\InvalidArgumentException;
 use Flow\ETL\Row;
 use Flow\ETL\Rows;
-use Flow\ETL\Transformer\CaseConverter;
 use Flow\ETL\Transformer\EntryNameCaseConverterTransformer;
 use PHPUnit\Framework\TestCase;
 
@@ -23,7 +23,7 @@ final class EntryNameCaseConverterTransformerTest extends TestCase
 
     public function test_conversion_of_entry_names_case() : void
     {
-        $transformer = new EntryNameCaseConverterTransformer(CaseConverter::STYLE_SNAKE);
+        $transformer = new EntryNameCaseConverterTransformer(CaseStyles::SNAKE);
 
         $rows = $transformer->transform(new Rows(
             Row::create(
