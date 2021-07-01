@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL;
+namespace Flow\ETL\Transformer\CaseConverter;
 
 /**
  * @psalm-immutable
  */
-final class ArrayKeyTransformer
+final class ArrayKeyConverter
 {
     /**
      * @var callable(string) : string
@@ -27,7 +27,7 @@ final class ArrayKeyTransformer
      *
      * @return array<mixed>
      */
-    public function transform(array $array) : array
+    public function convert(array $array) : array
     {
         $newArray = [];
 
@@ -36,7 +36,7 @@ final class ArrayKeyTransformer
             $newKey = \is_string($key) ? ($this->transformer)($key) : $key;
 
             if (\is_array($value)) {
-                $value = $this->transform($value);
+                $value = $this->convert($value);
             }
 
             $newArray[$newKey] = $value;

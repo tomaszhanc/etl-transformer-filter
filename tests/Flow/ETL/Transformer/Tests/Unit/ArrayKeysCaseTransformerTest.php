@@ -4,20 +4,17 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Transformer\Tests\Unit;
 
-use Flow\ETL\CaseStyles;
 use Flow\ETL\Row;
 use Flow\ETL\Rows;
-use Flow\ETL\Transformer\ArrayKeysCaseTransformer;
+use Flow\ETL\Transformer\ArrayKeysCaseConverterTransformer;
+use Flow\ETL\Transformer\CaseConverter\CaseStyles;
 use PHPUnit\Framework\TestCase;
 
 final class ArrayKeysCaseTransformerTest extends TestCase
 {
     public function test_transforms_case_style_for_all_keys_in_array_entry() : void
     {
-        $transformer = new ArrayKeysCaseTransformer(
-            'arrayEntry',
-            CaseStyles::SNAKE
-        );
+        $transformer = new ArrayKeysCaseConverterTransformer('arrayEntry', CaseStyles::SNAKE);
 
         $rows = $transformer->transform(
             new Rows(

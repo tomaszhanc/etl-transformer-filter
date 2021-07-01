@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Transformer;
 
-use Flow\ETL\ArrayKeyTransformer;
-use Flow\ETL\CaseStyles;
 use Flow\ETL\Exception\InvalidArgumentException;
 use Flow\ETL\Exception\RuntimeException;
 use Flow\ETL\Row;
 use Flow\ETL\Rows;
 use Flow\ETL\Transformer;
+use Flow\ETL\Transformer\CaseConverter\ArrayKeyConverter;
+use Flow\ETL\Transformer\CaseConverter\CaseStyles;
 use Flow\ETL\Transformer\Factory\NativeEntryFactory;
 use Jawira\CaseConverter\Convert;
 
 /**
  * @psalm-immutable
  */
-final class ArrayKeysCaseTransformer implements Transformer
+final class ArrayKeysCaseConverterTransformer implements Transformer
 {
     private string $arrayEntryName;
 
@@ -61,10 +61,10 @@ final class ArrayKeysCaseTransformer implements Transformer
             return $row->set(
                 $this->entryFactory->createEntry(
                     $arrayEntry->name(),
-                    (new ArrayKeyTransformer(
+                    (new ArrayKeyConverter(
                         /** @phpstan-ignore-next-line */
                         fn (string $key) : string => (string) \call_user_func([new Convert($key), 'to' . \ucfirst($this->style)])
-                    ))->transform($arrayEntry->value())
+                    ))->convert($arrayEntry->value())
                 )
             );
         };

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Flow\ETL\Transformer;
+namespace Flow\ETL\Transformer\Tests\Unit\CaseConverter;
 
-use Flow\ETL\ArrayKeyTransformer;
+use Flow\ETL\Transformer\CaseConverter\ArrayKeyConverter;
 use Jawira\CaseConverter\Convert;
 use PHPUnit\Framework\TestCase;
 
-final class ArrayKeyTransformerTest extends TestCase
+final class ArrayKeyConverterTest extends TestCase
 {
-    public function test_transform_all_keys_to_snake_case() : void
+    public function test_converts_all_keys_to_snake_case() : void
     {
-        $transformer = new ArrayKeyTransformer(
+        $transformer = new ArrayKeyConverter(
             fn (string $key) : string => (new Convert($key))->toSnake()
         );
 
@@ -35,7 +35,7 @@ final class ArrayKeyTransformerTest extends TestCase
                     'variant_name' => 'Variant Name',
                 ],
             ],
-            $transformer->transform([
+            $transformer->convert([
                 'itemId' => 1,
                 'itemStatus' => 'PENDING',
                 'itemEnabled' => true,

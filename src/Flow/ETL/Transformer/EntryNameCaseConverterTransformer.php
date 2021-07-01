@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Transformer;
 
-use Flow\ETL\CaseStyles;
 use Flow\ETL\Exception\InvalidArgumentException;
 use Flow\ETL\Exception\RuntimeException;
 use Flow\ETL\Row;
 use Flow\ETL\Row\Entry;
 use Flow\ETL\Rows;
 use Flow\ETL\Transformer;
+use Flow\ETL\Transformer\CaseConverter\CaseStyles;
 use Jawira\CaseConverter\Convert;
 
 /**

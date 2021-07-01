@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Transformer\Tests\Unit;
 
-use Flow\ETL\CaseStyles;
 use Flow\ETL\Exception\InvalidArgumentException;
 use Flow\ETL\Row;
 use Flow\ETL\Rows;
+use Flow\ETL\Transformer\CaseConverter\CaseStyles;
 use Flow\ETL\Transformer\EntryNameCaseConverterTransformer;
 use PHPUnit\Framework\TestCase;
 
