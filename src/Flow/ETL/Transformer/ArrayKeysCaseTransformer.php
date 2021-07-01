@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Flow\ETL\Transformer;
 
+use Flow\ETL\ArrayKeyTransformer;
 use Flow\ETL\CaseStyles;
 use Flow\ETL\Exception\InvalidArgumentException;
 use Flow\ETL\Exception\RuntimeException;
@@ -60,35 +61,14 @@ final class ArrayKeysCaseTransformer implements Transformer
             return $row->set(
                 $this->entryFactory->createEntry(
                     $arrayEntry->name(),
-                    $this->convertArrayKeysCase($arrayEntry->value())
+                    (new ArrayKeyTransformer(
+                        /** @phpstan-ignore-next-line */
+                        fn (string $key) : string => (string) \call_user_func([new Convert($key), 'to' . \ucfirst($this->style)])
+                    ))->transform($arrayEntry->value())
                 )
             );
         };
 
         return $rows->map($transformer);
-    }
-
-    /**
-     * @param array<mixed> $array
-     *
-     * @return array<mixed>
-     */
-    private function convertArrayKeysCase(array $array) : array
-    {
-        $newArray = [];
-
-        /** @psalm-suppress MixedAssignment */
-        foreach ($array as $key => $value) {
-            /** @phpstan-ignore-next-line */
-            $newKey = \is_string($key) ? (string) \call_user_func([new Convert($key), 'to' . \ucfirst($this->style)]) : $key;
-
-            if (\is_array($value)) {
-                $value = $this->convertArrayKeysCase($value);
-            }
-
-            $newArray[$newKey] = $value;
-        }
-
-        return $newArray;
     }
 }
