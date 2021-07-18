@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-07-16
+## [Unreleased] - 2021-07-18
 
 ### Added
 - [#81](https://github.com/flow-php/etl-transformer/pull/81) - **Added StringEntryValueCaseConverterTransformer** - [@DawidSajdak](https://github.com/DawidSajdak)
@@ -64,6 +64,8 @@
 - [e858d0](https://github.com/flow-php/etl-transformer/commit/e858d0a9826dab8ff71a0fc4b14e5a92d72d44a8) - **RemoveEntriesTransformer** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#83](https://github.com/flow-php/etl-transformer/pull/83) - **ConditionalTransformer returns Rows' flatMap now** - [@wojtekzymonik](https://github.com/wojtekzymonik)
+- [80d71f](https://github.com/flow-php/etl-transformer/commit/80d71f604502931f7a8c58acfd9edbd03808ce04) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#82](https://github.com/flow-php/etl-transformer/pull/82) - **Renamed transformers** - [@DawidSajdak](https://github.com/DawidSajdak)
 - [f37db4](https://github.com/flow-php/etl-transformer/commit/f37db40a5ec1552ba0a8dd9849eaf088bb379c41) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [3ed593](https://github.com/flow-php/etl-transformer/commit/3ed593d24eaf33221d073470248d4d8053e691e4) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
