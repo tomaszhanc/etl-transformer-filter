@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-07-30
+## [Unreleased] - 2021-08-01
 
 ### Added
 - [#81](https://github.com/flow-php/etl-transformer/pull/81) - **Added StringEntryValueCaseConverterTransformer** - [@DawidSajdak](https://github.com/DawidSajdak)
@@ -64,6 +64,8 @@
 - [e858d0](https://github.com/flow-php/etl-transformer/commit/e858d0a9826dab8ff71a0fc4b14e5a92d72d44a8) - **RemoveEntriesTransformer** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#89](https://github.com/flow-php/etl-transformer/pull/89) - **phpstan/phpstan from 0.12.93 to 0.12.94 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [759d36](https://github.com/flow-php/etl-transformer/commit/759d3662bbbd971466b2eabafc53cbe351837d34) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#84](https://github.com/flow-php/etl-transformer/pull/84) - **phpunit/phpunit from 9.5.6 to 9.5.7 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [#88](https://github.com/flow-php/etl-transformer/pull/88) - **symfony/validator from 5.3.4 to 5.3.6** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [a61518](https://github.com/flow-php/etl-transformer/commit/a615180a6bb76e603fd7b80724ad818d69554fa7) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
