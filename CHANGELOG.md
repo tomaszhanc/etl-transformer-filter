@@ -64,6 +64,8 @@
 - [e858d0](https://github.com/flow-php/etl-transformer/commit/e858d0a9826dab8ff71a0fc4b14e5a92d72d44a8) - **RemoveEntriesTransformer** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [80ab73](https://github.com/flow-php/etl-transformer/commit/80ab738c8f4487ed55ad100a0a3c1aa9930f8a26) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
+- [#95](https://github.com/flow-php/etl-transformer/pull/95) - **vimeo/psalm from 4.8.1 to 4.9.3 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [#90](https://github.com/flow-php/etl-transformer/pull/90) - **laminas/laminas-hydrator from 4.2.1 to 4.2.2** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [f18535](https://github.com/flow-php/etl-transformer/commit/f18535f56531ea8d7c74e6788582c2266b9195f5) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#93](https://github.com/flow-php/etl-transformer/pull/93) - **phpunit/phpunit from 9.5.7 to 9.5.8 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
