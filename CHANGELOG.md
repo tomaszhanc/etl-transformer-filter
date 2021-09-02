@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-08-31
+## [Unreleased] - 2021-09-02
 
 ### Added
 - [#81](https://github.com/flow-php/etl-transformer/pull/81) - **Added StringEntryValueCaseConverterTransformer** - [@DawidSajdak](https://github.com/DawidSajdak)
@@ -14,11 +14,11 @@
 - [#69](https://github.com/flow-php/etl-transformer/pull/69) - **ArrayMergeTransformer** - [@norberttech](https://github.com/norberttech)
 - [#67](https://github.com/flow-php/etl-transformer/pull/67) - **ArraySortTransformer** - [@norberttech](https://github.com/norberttech)
 - [#66](https://github.com/flow-php/etl-transformer/pull/66) - **possibility to cast array entry each element using any available ValueCaster** - [@norberttech](https://github.com/norberttech)
-- [#64](https://github.com/flow-php/etl-transformer/pull/64) - **ArrayDotValueLessOrEqualThan.php** - [@norberttech](https://github.com/norberttech)
-- [#64](https://github.com/flow-php/etl-transformer/pull/64) - **ArrayDotValueLessThan.php** - [@norberttech](https://github.com/norberttech)
+- [#64](https://github.com/flow-php/etl-transformer/pull/64) - **ArrayDotValueEqualsTo.php** - [@norberttech](https://github.com/norberttech)
 - [#64](https://github.com/flow-php/etl-transformer/pull/64) - **ArrayDotValueGreaterOrEqualThan.php** - [@norberttech](https://github.com/norberttech)
 - [#64](https://github.com/flow-php/etl-transformer/pull/64) - **ArrayDotValueGreaterThan.php** - [@norberttech](https://github.com/norberttech)
-- [#64](https://github.com/flow-php/etl-transformer/pull/64) - **ArrayDotValueEqualsTo.php** - [@norberttech](https://github.com/norberttech)
+- [#64](https://github.com/flow-php/etl-transformer/pull/64) - **ArrayDotValueLessOrEqualThan.php** - [@norberttech](https://github.com/norberttech)
+- [#64](https://github.com/flow-php/etl-transformer/pull/64) - **ArrayDotValueLessThan.php** - [@norberttech](https://github.com/norberttech)
 - [#63](https://github.com/flow-php/etl-transformer/pull/63) - **ConditionalTransformer** - [@norberttech](https://github.com/norberttech)
 - [#63](https://github.com/flow-php/etl-transformer/pull/63) - **StaticEntryTransformer** - [@norberttech](https://github.com/norberttech)
 - [#61](https://github.com/flow-php/etl-transformer/pull/61) - **Add option to skip some entries when unpacking an array with ArrayUnpackTransformer** - [@tomaszhanc](https://github.com/tomaszhanc)
@@ -30,8 +30,8 @@
 - [#51](https://github.com/flow-php/etl-transformer/pull/51) - **ObjectMethodTransformer** - [@norberttech](https://github.com/norberttech)
 - [#48](https://github.com/flow-php/etl-transformer/pull/48) - **EntryExists filter for FilterRowsTransformer** - [@norberttech](https://github.com/norberttech)
 - [#45](https://github.com/flow-php/etl-transformer/pull/45) - **NullStringIntoNullEntryTransfromer implementation** - [@tomaszhanc](https://github.com/tomaszhanc)
-- [#42](https://github.com/flow-php/etl-transformer/pull/42) - **CallbackRowTransformer** - [@norberttech](https://github.com/norberttech)
 - [#42](https://github.com/flow-php/etl-transformer/pull/42) - **CloneEntryTransformer** - [@norberttech](https://github.com/norberttech)
+- [#42](https://github.com/flow-php/etl-transformer/pull/42) - **CallbackRowTransformer** - [@norberttech](https://github.com/norberttech)
 - [#40](https://github.com/flow-php/etl-transformer/pull/40) - **prefix to array unpack transformer** - [@norberttech](https://github.com/norberttech)
 - [#39](https://github.com/flow-php/etl-transformer/pull/39) - **DynamicEntryTransformer** - [@norberttech](https://github.com/norberttech)
 - [#37](https://github.com/flow-php/etl-transformer/pull/37) - **RowsFactory interface with two simple factories useful for generating rows for diffs** - [@norberttech](https://github.com/norberttech)
@@ -41,13 +41,13 @@
 - [#34](https://github.com/flow-php/etl-transformer/pull/34) - **CastToDateTime - timezone in case it's just a string "2020-01-01 00:00:00"** - [@norberttech](https://github.com/norberttech)
 - [#34](https://github.com/flow-php/etl-transformer/pull/34) - **CastToDateTime - to timezone in case string needs to be converted to different tz "2020-01-01 00:00:00+00:00"** - [@norberttech](https://github.com/norberttech)
 - [#33](https://github.com/flow-php/etl-transformer/pull/33) - **added EntryNameCaseConverterTransformer** - [@norberttech](https://github.com/norberttech)
-- [#32](https://github.com/flow-php/etl-transformer/pull/32) - **EntryNumber - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
-- [#32](https://github.com/flow-php/etl-transformer/pull/32) - **EntryNotEquals - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
-- [#32](https://github.com/flow-php/etl-transformer/pull/32) - **EntryNotNumber - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
 - [#32](https://github.com/flow-php/etl-transformer/pull/32) - **All - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
-- [#32](https://github.com/flow-php/etl-transformer/pull/32) - **Opposite - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
 - [#32](https://github.com/flow-php/etl-transformer/pull/32) - **Any - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
+- [#32](https://github.com/flow-php/etl-transformer/pull/32) - **Opposite - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
 - [#32](https://github.com/flow-php/etl-transformer/pull/32) - **All - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
+- [#32](https://github.com/flow-php/etl-transformer/pull/32) - **EntryNumber - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
+- [#32](https://github.com/flow-php/etl-transformer/pull/32) - **EntryNotNumber - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
+- [#32](https://github.com/flow-php/etl-transformer/pull/32) - **EntryNotEquals - Filter for FilterTransformer** - [@norberttech](https://github.com/norberttech)
 - [#30](https://github.com/flow-php/etl-transformer/pull/30) - **StringFormatTransformer** - [@norberttech](https://github.com/norberttech)
 - [#29](https://github.com/flow-php/etl-transformer/pull/29) - **ArrayExpandTransformer** - [@norberttech](https://github.com/norberttech)
 - [#26](https://github.com/flow-php/etl-transformer/pull/26) - **Added Callback Entry transformer** - [@pambuk](https://github.com/pambuk)
@@ -64,6 +64,8 @@
 - [e858d0](https://github.com/flow-php/etl-transformer/commit/e858d0a9826dab8ff71a0fc4b14e5a92d72d44a8) - **RemoveEntriesTransformer** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#102](https://github.com/flow-php/etl-transformer/pull/102) - **phpstan/phpstan from 0.12.96 to 0.12.98 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [23081c](https://github.com/flow-php/etl-transformer/commit/23081c416f9b25c590e5664296ffa4d729d9e61c) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#99](https://github.com/flow-php/etl-transformer/pull/99) - **symfony/validator from 5.3.6 to 5.3.7** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [#100](https://github.com/flow-php/etl-transformer/pull/100) - **phpunit/phpunit from 9.5.8 to 9.5.9 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [d18d50](https://github.com/flow-php/etl-transformer/commit/d18d507b8199301988cf4ac0376d7ed80858f4bf) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
