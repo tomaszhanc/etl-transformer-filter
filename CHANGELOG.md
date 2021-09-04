@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-09-02
+## [Unreleased] - 2021-09-04
 
 ### Added
 - [#81](https://github.com/flow-php/etl-transformer/pull/81) - **Added StringEntryValueCaseConverterTransformer** - [@DawidSajdak](https://github.com/DawidSajdak)
@@ -64,6 +64,7 @@
 - [e858d0](https://github.com/flow-php/etl-transformer/commit/e858d0a9826dab8ff71a0fc4b14e5a92d72d44a8) - **RemoveEntriesTransformer** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [2c19ab](https://github.com/flow-php/etl-transformer/commit/2c19ab0d0993ae8742358190d06c49178fc8837f) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#102](https://github.com/flow-php/etl-transformer/pull/102) - **phpstan/phpstan from 0.12.96 to 0.12.98 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [23081c](https://github.com/flow-php/etl-transformer/commit/23081c416f9b25c590e5664296ffa4d729d9e61c) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#99](https://github.com/flow-php/etl-transformer/pull/99) - **symfony/validator from 5.3.6 to 5.3.7** - [@dependabot[bot]](https://github.com/apps/dependabot)
@@ -206,6 +207,7 @@
 - [2dcbd9](https://github.com/flow-php/etl-transformer/commit/2dcbd969dd06c3afb3f8bf9d77b9fa3e576ad96c) - **Initial commit** - [@DawidSajdak](https://github.com/DawidSajdak)
 
 ### Fixed
+- [#103](https://github.com/flow-php/etl-transformer/pull/103) - **Added dependabot for tool** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#74](https://github.com/flow-php/etl-transformer/pull/74) - **Fix a bug in CastEntries when casting was interrupted on the first NullEntry if the nullable option was enabled** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#58](https://github.com/flow-php/etl-transformer/pull/58) - **Github Action for checking PR description** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#55](https://github.com/flow-php/etl-transformer/pull/55) - **naming for string concat transformer** - [@owsiakl](https://github.com/owsiakl)
