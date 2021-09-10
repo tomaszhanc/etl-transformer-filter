@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-09-09
+## [Unreleased] - 2021-09-10
 
 ### Added
 - [#81](https://github.com/flow-php/etl-transformer/pull/81) - **Added StringEntryValueCaseConverterTransformer** - [@DawidSajdak](https://github.com/DawidSajdak)
@@ -64,6 +64,9 @@
 - [e858d0](https://github.com/flow-php/etl-transformer/commit/e858d0a9826dab8ff71a0fc4b14e5a92d72d44a8) - **RemoveEntriesTransformer** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#105](https://github.com/flow-php/etl-transformer/pull/105) - **infection/infection from 0.24.0 to 0.25.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#107](https://github.com/flow-php/etl-transformer/pull/107) - **laminas/laminas-hydrator from 4.3.0 to 4.3.1** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [ff668b](https://github.com/flow-php/etl-transformer/commit/ff668b26e9669ee36911e5224dc97656a654f05f) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#104](https://github.com/flow-php/etl-transformer/pull/104) - **vimeo/psalm from 4.9.3 to 4.10.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [8c7095](https://github.com/flow-php/etl-transformer/commit/8c7095c2b373307f79466e4180c34c91742ed639) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#106](https://github.com/flow-php/etl-transformer/pull/106) - **laminas/laminas-hydrator from 4.2.2 to 4.3.0** - [@dependabot[bot]](https://github.com/apps/dependabot)
