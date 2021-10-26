@@ -93,6 +93,9 @@
 - [b9226c](https://github.com/flow-php/etl-transformer/commit/b9226c3294b434b532ce8ec38d3b6ccb27b53c0f) - **failing mutation test** - [@DawidSajdak](https://github.com/DawidSajdak)
 
 ### Updated
+- [#114](https://github.com/flow-php/etl-transformer/pull/114) - **friendsofphp/php-cs-fixer from 2.19.0 to 3.2.1 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#116](https://github.com/flow-php/etl-transformer/pull/116) - **vimeo/psalm from 4.10.0 to 4.11.1 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [8c1df4](https://github.com/flow-php/etl-transformer/commit/8c1df4d80453fe7d138c2f39c58a1c9b9639df7c) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [f5695c](https://github.com/flow-php/etl-transformer/commit/f5695cc014b13975ff1c89d47a0a73431e4864ef) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#111](https://github.com/flow-php/etl-transformer/pull/111) - **phpunit/phpunit from 9.5.9 to 9.5.10 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [#112](https://github.com/flow-php/etl-transformer/pull/112) - **symfony/validator from 5.3.7 to 5.3.8** - [@dependabot[bot]](https://github.com/apps/dependabot)
