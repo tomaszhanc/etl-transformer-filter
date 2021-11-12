@@ -156,21 +156,28 @@
         },
         {
             "name": "jawira/case-converter",
-            "version": "v3.4.2",
+            "version": "v3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jawira/case-converter.git",
-                "reference": "b32f881bfe30141a82c3b2d6ee466a2f192c7776"
+                "reference": "7981ae8a0fbd595a09a509dac461758f1ad3c11c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jawira/case-converter/zipball/b32f881bfe30141a82c3b2d6ee466a2f192c7776",
-                "reference": "b32f881bfe30141a82c3b2d6ee466a2f192c7776",
+                "url": "https://api.github.com/repos/jawira/case-converter/zipball/7981ae8a0fbd595a09a509dac461758f1ad3c11c",
+                "reference": "7981ae8a0fbd595a09a509dac461758f1ad3c11c",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "php": ">=7.1"
+            },
+            "require-dev": {
+                "behat/behat": "^3.9",
+                "ergebnis/composer-normalize": "^2.15",
+                "jawira/skeleton": "^2.12",
+                "phpstan/phpstan": "^1.0",
+                "phpunit/phpunit": "^7"
             },
             "suggest": {
                 "pds/skeleton": "PHP Package Development Standards",
@@ -189,8 +196,7 @@
             "authors": [
                 {
                     "name": "Jawira Portugal",
-                    "email": "dev@tugal.be",
-                    "homepage": "http://jawira.com/"
+                    "email": "dev@tugal.be"
                 }
             ],
             "description": "Convert strings between 13 naming conventions: Snake case, Camel case, Pascal case, Kebab case, Ada case, Train case, Cobol case, Macro case, Upper case, Lower case, Sentence case, Title case and Dot notation.",
@@ -212,9 +218,9 @@
             ],
             "support": {
                 "issues": "https://github.com/jawira/case-converter/issues",
-                "source": "https://github.com/jawira/case-converter/tree/v3.4.2"
+                "source": "https://github.com/jawira/case-converter/tree/v3.4.4"
             },
-            "time": "2021-01-05T08:56:22+00:00"
+            "time": "2021-11-12T17:02:43+00:00"
         },
         {
             "name": "laminas/laminas-hydrator",
