@@ -156,28 +156,27 @@
         },
         {
             "name": "jawira/case-converter",
-            "version": "v3.4.4",
+            "version": "v3.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jawira/case-converter.git",
-                "reference": "7981ae8a0fbd595a09a509dac461758f1ad3c11c"
+                "reference": "7d88aaf28c173ab89f77a9b6296a149d4d9eb4e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jawira/case-converter/zipball/7981ae8a0fbd595a09a509dac461758f1ad3c11c",
-                "reference": "7981ae8a0fbd595a09a509dac461758f1ad3c11c",
+                "url": "https://api.github.com/repos/jawira/case-converter/zipball/7d88aaf28c173ab89f77a9b6296a149d4d9eb4e5",
+                "reference": "7d88aaf28c173ab89f77a9b6296a149d4d9eb4e5",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">=7.1"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "behat/behat": "^3.9",
-                "ergebnis/composer-normalize": "^2.15",
-                "jawira/skeleton": "^2.12",
+                "behat/behat": "^3.0",
                 "phpstan/phpstan": "^1.0",
-                "phpunit/phpunit": "^7"
+                "phpunit/phpunit": "^9.0",
+                "vimeo/psalm": "^4.0"
             },
             "suggest": {
                 "pds/skeleton": "PHP Package Development Standards",
@@ -218,9 +217,9 @@
             ],
             "support": {
                 "issues": "https://github.com/jawira/case-converter/issues",
-                "source": "https://github.com/jawira/case-converter/tree/v3.4.4"
+                "source": "https://github.com/jawira/case-converter/tree/v3.4.5"
             },
-            "time": "2021-11-12T17:02:43+00:00"
+            "time": "2021-11-17T22:01:20+00:00"
         },
         {
             "name": "laminas/laminas-hydrator",
