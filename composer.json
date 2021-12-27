@@ -40,6 +40,7 @@
         }
     },
     "scripts": {
+        "tools:install": "composer install --working-dir=./tools",
         "build": [
             "@static:analyze",
             "@test",

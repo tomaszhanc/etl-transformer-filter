@@ -35,6 +35,7 @@ final class StringFormatTransformer implements Transformer
             return $row->remove(
                 $entry->name()
             )->add(
+                /** @phpstan-ignore-next-line */
                 new Row\Entry\StringEntry($entry->name(), \sprintf($this->format, $entry->value()))
             );
         };

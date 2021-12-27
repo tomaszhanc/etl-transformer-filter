@@ -55,6 +55,7 @@ final class ArrayMergeTransformer implements Transformer
             /** @psalm-suppress MixedArgument */
             return $row->add(new Row\Entry\ArrayEntry(
                 $this->newEntryName,
+                /** @phpstan-ignore-next-line */
                 \array_merge(...$entryValues)
             ));
         };

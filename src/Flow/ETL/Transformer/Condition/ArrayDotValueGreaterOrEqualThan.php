@@ -19,20 +19,16 @@ final class ArrayDotValueGreaterOrEqualThan implements RowCondition
      */
     private $value;
 
-    private bool $identical;
-
     /**
      * @param string $arrayEntryName
      * @param string $path
      * @param mixed $value
-     * @param bool $identical
      */
-    public function __construct(string $arrayEntryName, string $path, $value, bool $identical = true)
+    public function __construct(string $arrayEntryName, string $path, $value)
     {
         $this->arrayEntryName = $arrayEntryName;
         $this->path = $path;
         $this->value = $value;
-        $this->identical = $identical;
     }
 
     public function isMetFor(Row $row) : bool

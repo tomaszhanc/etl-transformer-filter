@@ -16,12 +16,9 @@ final class ArrayReverseTransformer implements Transformer
 {
     private string $arrayEntryName;
 
-    private int $sortingFlag;
-
-    public function __construct(string $arrayEntry, int $sortingFlag = \SORT_REGULAR)
+    public function __construct(string $arrayEntry)
     {
         $this->arrayEntryName = $arrayEntry;
-        $this->sortingFlag = $sortingFlag;
     }
 
     public function transform(Rows $rows) : Rows
@@ -44,6 +41,7 @@ final class ArrayReverseTransformer implements Transformer
             return $row->remove($arrayEntry->name())
                 ->add(new Row\Entry\ArrayEntry(
                     $arrayEntry->name(),
+                    /** @phpstan-ignore-next-line */
                     \array_reverse($arrayEntry->value())
                 ));
         };
