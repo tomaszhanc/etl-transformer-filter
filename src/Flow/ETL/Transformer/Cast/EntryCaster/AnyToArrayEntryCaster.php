@@ -14,7 +14,7 @@ use Flow\ETL\Transformer\Cast\ValueCaster;
  */
 final class AnyToArrayEntryCaster implements EntryCaster
 {
-    private ValueCaster $valueCaster;
+    private ValueCaster\AnyToArrayCaster $valueCaster;
 
     public function __construct()
     {
@@ -23,7 +23,6 @@ final class AnyToArrayEntryCaster implements EntryCaster
 
     public function cast(Entry $entry) : Entry
     {
-        /** @psalm-suppress MixedArgument */
         return new ArrayEntry(
             $entry->name(),
             $this->valueCaster->cast($entry->value())

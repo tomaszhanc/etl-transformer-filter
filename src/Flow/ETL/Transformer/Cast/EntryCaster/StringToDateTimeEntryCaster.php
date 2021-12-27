@@ -14,7 +14,7 @@ use Flow\ETL\Transformer\Cast\ValueCaster;
  */
 final class StringToDateTimeEntryCaster implements EntryCaster
 {
-    private ValueCaster $valueCaster;
+    private ValueCaster\StringToDateTimeCaster $valueCaster;
 
     /**
      * $timezone - this value should be used for datetime values that does not come with explicit tz to avoid using system default.
@@ -35,7 +35,6 @@ final class StringToDateTimeEntryCaster implements EntryCaster
 
     public function cast(Entry $entry) : Entry
     {
-        /** @psalm-suppress MixedArgument */
         return new DateTimeEntry(
             $entry->name(),
             $this->valueCaster->cast($entry->value())

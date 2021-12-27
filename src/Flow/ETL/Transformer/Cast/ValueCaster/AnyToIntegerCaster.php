@@ -13,6 +13,7 @@ final class AnyToIntegerCaster implements ValueCaster
 {
     public function cast($value) : int
     {
+        /** @phpstan-ignore-next-line */
         return (int) $value;
     }
 }

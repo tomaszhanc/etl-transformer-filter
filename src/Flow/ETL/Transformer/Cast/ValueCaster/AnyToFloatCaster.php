@@ -13,6 +13,7 @@ final class AnyToFloatCaster implements ValueCaster
 {
     public function cast($value) : float
     {
+        /** @phpstan-ignore-next-line */
         return (float) $value;
     }
 }

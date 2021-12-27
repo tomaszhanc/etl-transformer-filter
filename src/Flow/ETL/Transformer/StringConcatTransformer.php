@@ -45,6 +45,7 @@ final class StringConcatTransformer implements Transformer
             $values = [];
 
             foreach ($entries->all() as $entry) {
+                /** @phpstan-ignore-next-line */
                 $values[] = (string) $entry->value();
             }
 

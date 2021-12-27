@@ -24,6 +24,7 @@ final class CastedRowsFactory implements RowsFactory
         $this->castEntries = $castEntries;
     }
 
+    /** @phpstan-ignore-next-line */
     public function create(array $data) : Rows
     {
         return (new CastTransformer(...$this->castEntries))->transform($this->factory->create($data));

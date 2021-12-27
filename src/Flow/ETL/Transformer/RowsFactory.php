@@ -7,6 +7,8 @@ use Flow\ETL\Rows;
 interface RowsFactory
 {
     /**
+     * @phpstan-ignore-next-line
+     *
      * @param array<array> $data
      *
      * @return Rows

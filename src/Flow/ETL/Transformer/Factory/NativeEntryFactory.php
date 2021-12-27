@@ -18,7 +18,7 @@ final class NativeEntryFactory implements EntryFactory
         if (\is_string($value)) {
             if (\class_exists('\\Flow\\ETL\\Row\\Entry\\JsonEntry') && $this->isJson($value)) {
                 /** @psalm-suppress MixedArgument */
-                return new Row\Entry\JsonEntry($entryName, \json_decode($value, true, self::JSON_DEPTH, JSON_THROW_ON_ERROR));
+                return new Row\Entry\JsonEntry($entryName, (array) \json_decode($value, true, self::JSON_DEPTH, JSON_THROW_ON_ERROR));
             }
 
             return new Row\Entry\StringEntry($entryName, $value);

@@ -13,6 +13,7 @@ use Flow\ETL\Transformer\RowsFactory;
 
 final class ArrayRowsFactory implements RowsFactory
 {
+    /** @phpstan-ignore-next-line */
     public function create(array $data) : Rows
     {
         foreach ($data as $row) {

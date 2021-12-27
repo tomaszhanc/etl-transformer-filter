@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/flow-php/array-dot.git",
-                "reference": "b59fd4f57206dd6e9cc808c42905a57956f863fa"
+                "reference": "c07cbf03157ef528aa0cafc5beb26c07f911f6e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flow-php/array-dot/zipball/b59fd4f57206dd6e9cc808c42905a57956f863fa",
-                "reference": "b59fd4f57206dd6e9cc808c42905a57956f863fa",
+                "url": "https://api.github.com/repos/flow-php/array-dot/zipball/c07cbf03157ef528aa0cafc5beb26c07f911f6e8",
+                "reference": "c07cbf03157ef528aa0cafc5beb26c07f911f6e8",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "issues": "https://github.com/flow-php/array-dot/issues",
                 "source": "https://github.com/flow-php/array-dot/tree/1.x"
             },
-            "time": "2021-06-30T18:37:34+00:00"
+            "time": "2021-12-13T21:14:06+00:00"
         },
         {
             "name": "flow-php/etl",
@@ -61,12 +61,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/flow-php/etl.git",
-                "reference": "63ed4fafa734aae4cf8a05790c855ab1826dcc04"
+                "reference": "e7402c3d7daa592b5f31b8c7dbdfb45f616fc1ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flow-php/etl/zipball/63ed4fafa734aae4cf8a05790c855ab1826dcc04",
-                "reference": "63ed4fafa734aae4cf8a05790c855ab1826dcc04",
+                "url": "https://api.github.com/repos/flow-php/etl/zipball/e7402c3d7daa592b5f31b8c7dbdfb45f616fc1ae",
+                "reference": "e7402c3d7daa592b5f31b8c7dbdfb45f616fc1ae",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +97,7 @@
                 "issues": "https://github.com/flow-php/etl/issues",
                 "source": "https://github.com/flow-php/etl/tree/1.x"
             },
-            "time": "2021-07-05T06:10:34+00:00"
+            "time": "2021-12-27T06:10:27+00:00"
         }
     ],
     "packages-dev": [
@@ -107,12 +107,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/flow-php/etl-adapter-json.git",
-                "reference": "674d48cefa57af45fc3a2673cdadb420926e5ba2"
+                "reference": "0b101b2df2e6e0cb2fef2b94fe9b96ed14370aa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flow-php/etl-adapter-json/zipball/674d48cefa57af45fc3a2673cdadb420926e5ba2",
-                "reference": "674d48cefa57af45fc3a2673cdadb420926e5ba2",
+                "url": "https://api.github.com/repos/flow-php/etl-adapter-json/zipball/0b101b2df2e6e0cb2fef2b94fe9b96ed14370aa5",
+                "reference": "0b101b2df2e6e0cb2fef2b94fe9b96ed14370aa5",
                 "shasum": ""
             },
             "require": {
@@ -121,7 +121,7 @@
                 "php": "^7.4 | ^8.0"
             },
             "require-dev": {
-                "halaxa/json-machine": "^0.6.1"
+                "halaxa/json-machine": "^0.6.1 || ^0.7.0"
             },
             "suggest": {
                 "halaxa/json-machine": "Memory safe json library used by Extractors and Loaders"
@@ -152,7 +152,7 @@
                 "issues": "https://github.com/flow-php/etl-adapter-json/issues",
                 "source": "https://github.com/flow-php/etl-adapter-json/tree/1.x"
             },
-            "time": "2021-06-26T15:13:30+00:00"
+            "time": "2021-12-13T22:16:23+00:00"
         },
         {
             "name": "jawira/case-converter",
@@ -300,16 +300,16 @@
         },
         {
             "name": "laminas/laminas-stdlib",
-            "version": "3.6.0",
+            "version": "3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stdlib.git",
-                "reference": "c53d8537f108fac3fae652677a19735db730ba46"
+                "reference": "abba193937e1ec418cfad1999736e6264a28d14b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/c53d8537f108fac3fae652677a19735db730ba46",
-                "reference": "c53d8537f108fac3fae652677a19735db730ba46",
+                "url": "https://api.github.com/repos/laminas/laminas-stdlib/zipball/abba193937e1ec418cfad1999736e6264a28d14b",
+                "reference": "abba193937e1ec418cfad1999736e6264a28d14b",
                 "shasum": ""
             },
             "require": {
@@ -355,7 +355,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-09-02T16:11:32+00:00"
+            "time": "2021-12-24T17:44:31+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -1008,5 +1008,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }

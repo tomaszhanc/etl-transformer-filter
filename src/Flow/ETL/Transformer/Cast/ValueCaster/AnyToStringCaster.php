@@ -13,6 +13,7 @@ final class AnyToStringCaster implements ValueCaster
 {
     public function cast($value) : string
     {
+        /** @phpstan-ignore-next-line */
         return (string) $value;
     }
 }
