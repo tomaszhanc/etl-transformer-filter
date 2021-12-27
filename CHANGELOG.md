@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-10-26
+## [Unreleased] - 2021-12-27
 
 ### Added
 - [#117](https://github.com/flow-php/etl-transformer/pull/117) - **Workflow to auto-merge dependabot PRs** - [@tomaszhanc](https://github.com/tomaszhanc)
@@ -81,6 +81,7 @@
 - [2dcbd9](https://github.com/flow-php/etl-transformer/commit/2dcbd969dd06c3afb3f8bf9d77b9fa3e576ad96c) - **Initial commit** - [@DawidSajdak](https://github.com/DawidSajdak)
 
 ### Fixed
+- [#143](https://github.com/flow-php/etl-transformer/pull/143) - **PHP errors** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#103](https://github.com/flow-php/etl-transformer/pull/103) - **Added dependabot for tool** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#74](https://github.com/flow-php/etl-transformer/pull/74) - **Fix a bug in CastEntries when casting was interrupted on the first NullEntry if the nullable option was enabled** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#58](https://github.com/flow-php/etl-transformer/pull/58) - **Github Action for checking PR description** - [@tomaszhanc](https://github.com/tomaszhanc)
@@ -93,6 +94,31 @@
 - [b9226c](https://github.com/flow-php/etl-transformer/commit/b9226c3294b434b532ce8ec38d3b6ccb27b53c0f) - **failing mutation test** - [@DawidSajdak](https://github.com/DawidSajdak)
 
 ### Updated
+- [#142](https://github.com/flow-php/etl-transformer/pull/142) - **infection/infection from 0.25.4 to 0.25.5 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#141](https://github.com/flow-php/etl-transformer/pull/141) - **friendsofphp/php-cs-fixer from 3.3.2 to 3.4.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#140](https://github.com/flow-php/etl-transformer/pull/140) - **symfony/validator from 5.4.0 to 5.4.1** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#139](https://github.com/flow-php/etl-transformer/pull/139) - **infection/infection from 0.25.3 to 0.25.4 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#138](https://github.com/flow-php/etl-transformer/pull/138) - **vimeo/psalm from 4.14.0 to 4.15.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#137](https://github.com/flow-php/etl-transformer/pull/137) - **vimeo/psalm from 4.13.1 to 4.14.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#136](https://github.com/flow-php/etl-transformer/pull/136) - **symfony/validator from 5.3.12 to 5.4.0** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#134](https://github.com/flow-php/etl-transformer/pull/134) - **symfony/validator from 5.3.11 to 5.3.12** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#135](https://github.com/flow-php/etl-transformer/pull/135) - **vimeo/psalm from 4.13.0 to 4.13.1 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#133](https://github.com/flow-php/etl-transformer/pull/133) - **vimeo/psalm from 4.12.0 to 4.13.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#131](https://github.com/flow-php/etl-transformer/pull/131) - **symfony/validator from 5.3.10 to 5.3.11** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#132](https://github.com/flow-php/etl-transformer/pull/132) - **jawira/case-converter from 3.4.5 to 3.4.6** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#130](https://github.com/flow-php/etl-transformer/pull/130) - **phpstan/phpstan from 1.1.2 to 1.2.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#129](https://github.com/flow-php/etl-transformer/pull/129) - **jawira/case-converter from 3.4.4 to 3.4.5** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#128](https://github.com/flow-php/etl-transformer/pull/128) - **friendsofphp/php-cs-fixer from 3.2.1 to 3.3.2 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#127](https://github.com/flow-php/etl-transformer/pull/127) - **jawira/case-converter from 3.4.2 to 3.4.4** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#126](https://github.com/flow-php/etl-transformer/pull/126) - **phpstan/phpstan from 1.1.1 to 1.1.2 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#125](https://github.com/flow-php/etl-transformer/pull/125) - **vimeo/psalm from 4.11.2 to 4.12.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#124](https://github.com/flow-php/etl-transformer/pull/124) - **phpstan/phpstan from 1.0.2 to 1.1.1 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#122](https://github.com/flow-php/etl-transformer/pull/122) - **phpstan/phpstan from 1.0.1 to 1.0.2 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#121](https://github.com/flow-php/etl-transformer/pull/121) - **phpstan/phpstan from 1.0.0 to 1.0.1 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#120](https://github.com/flow-php/etl-transformer/pull/120) - **phpstan/phpstan from 0.12.99 to 1.0.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#119](https://github.com/flow-php/etl-transformer/pull/119) - **symfony/validator from 5.3.8 to 5.3.10** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#118](https://github.com/flow-php/etl-transformer/pull/118) - **vimeo/psalm from 4.11.1 to 4.11.2 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [4ae002](https://github.com/flow-php/etl-transformer/commit/4ae002239ed40e60450d4fc77a837213c4903993) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#114](https://github.com/flow-php/etl-transformer/pull/114) - **friendsofphp/php-cs-fixer from 2.19.0 to 3.2.1 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [#116](https://github.com/flow-php/etl-transformer/pull/116) - **vimeo/psalm from 4.10.0 to 4.11.1 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [8c1df4](https://github.com/flow-php/etl-transformer/commit/8c1df4d80453fe7d138c2f39c58a1c9b9639df7c) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
