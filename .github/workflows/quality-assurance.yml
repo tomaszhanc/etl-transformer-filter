@@ -11,13 +11,13 @@ jobs:
     name: Tests
     strategy:
       matrix:
-        check: [ tests, static analyze, mutation tests ]
+        check: [ tests, static-analyze, mutation-tests ]
         dependencies: [ locked ]
         php-version: [ 7.4 ]
         operating-system: [ ubuntu-latest ]
         include:
           - check: tests
-            dependencies: lowest
+            dependencies: [ lowest, highest ]
             php-version: 8.0
 
     runs-on: ${{ matrix.operating-system }}
@@ -71,11 +71,11 @@ jobs:
         timeout-minutes: 2
 
       - name: Static Analyze
-        if: ${{ matrix.check == 'static analyze' }}
+        if: ${{ matrix.check == 'static-analyze' }}
         run: composer static:analyze
         timeout-minutes: 2
 
       - name: Mutation Tests
-        if: ${{ matrix.check == 'mutation tests' }}
+        if: ${{ matrix.check == 'mutation-tests' }}
         run: composer test:mutation
         timeout-minutes: 2
