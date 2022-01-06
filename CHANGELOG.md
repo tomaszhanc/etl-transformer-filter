@@ -1,4 +1,4 @@
-## [Unreleased] - 2021-12-27
+## [Unreleased] - 2022-01-06
 
 ### Added
 - [#117](https://github.com/flow-php/etl-transformer/pull/117) - **Workflow to auto-merge dependabot PRs** - [@tomaszhanc](https://github.com/tomaszhanc)
@@ -81,6 +81,7 @@
 - [2dcbd9](https://github.com/flow-php/etl-transformer/commit/2dcbd969dd06c3afb3f8bf9d77b9fa3e576ad96c) - **Initial commit** - [@DawidSajdak](https://github.com/DawidSajdak)
 
 ### Fixed
+- [#148](https://github.com/flow-php/etl-transformer/pull/148) - **Psalm errors** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#143](https://github.com/flow-php/etl-transformer/pull/143) - **PHP errors** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#103](https://github.com/flow-php/etl-transformer/pull/103) - **Added dependabot for tool** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#74](https://github.com/flow-php/etl-transformer/pull/74) - **Fix a bug in CastEntries when casting was interrupted on the first NullEntry if the nullable option was enabled** - [@tomaszhanc](https://github.com/tomaszhanc)
@@ -94,6 +95,11 @@
 - [b9226c](https://github.com/flow-php/etl-transformer/commit/b9226c3294b434b532ce8ec38d3b6ccb27b53c0f) - **failing mutation test** - [@DawidSajdak](https://github.com/DawidSajdak)
 
 ### Updated
+- [#147](https://github.com/flow-php/etl-transformer/pull/147) - **phpstan/phpstan from 1.3.0 to 1.3.1 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#146](https://github.com/flow-php/etl-transformer/pull/146) - **vimeo/psalm from 4.16.1 to 4.17.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#145](https://github.com/flow-php/etl-transformer/pull/145) - **phpstan/phpstan from 1.2.0 to 1.3.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [#144](https://github.com/flow-php/etl-transformer/pull/144) - **symfony/validator from 5.4.1 to 5.4.2** - [@dependabot[bot]](https://github.com/apps/dependabot)
+- [ee1266](https://github.com/flow-php/etl-transformer/commit/ee12661e23d380bf4f89ab187b7f19d81064ca86) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#142](https://github.com/flow-php/etl-transformer/pull/142) - **infection/infection from 0.25.4 to 0.25.5 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [#141](https://github.com/flow-php/etl-transformer/pull/141) - **friendsofphp/php-cs-fixer from 3.3.2 to 3.4.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [#140](https://github.com/flow-php/etl-transformer/pull/140) - **symfony/validator from 5.4.0 to 5.4.1** - [@dependabot[bot]](https://github.com/apps/dependabot)
