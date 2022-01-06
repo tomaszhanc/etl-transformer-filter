@@ -31,44 +31,24 @@ jobs:
         env:
           COMPOSER_TOKEN: ${{ secrets.PRIVATE_REPOSITORY_ACCESS }}
 
-      - name: Get Composer cache directory
-        id: composer-cache
-        run: |
-          echo ::set-output name=dir::$(composer config cache-files-dir)
-      - name: Cache Composer dependencies
-        uses: actions/cache@v2
+      - name: Install dependencies
+        uses: ramsey/composer-install@v2
         with:
-          path: |
-            ${{ steps.composer-cache.outputs.dir }}
-          key: php-${{ matrix.php-version }}-${{ matrix.dependencies }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            php-${{ matrix.php-version }}-${{ matrix.dependencies }}-composer-
+          dependency-versions: ${{ matrix.dependencies }}
 
-      - name: Install lowest dependencies
-        if: ${{ matrix.dependencies == 'lowest' }}
-        run: composer update --prefer-lowest --no-interaction --no-progress --no-suggest
-
-      - name: Install highest dependencies
-        if: ${{ matrix.dependencies == 'highest' }}
-        run: composer update --no-interaction --no-progress --no-suggest
-
-      - name: Install locked dependencies
-        if: ${{ matrix.dependencies == 'locked' }}
-        run: composer install --no-interaction --no-progress --no-suggest
-
-      - name: Install tools
-        run: composer install --no-interaction --no-progress --no-suggest
-        working-directory: ./tools
+      - name: Install dependencies
+          uses: ramsey/composer-install@v2
+          with:
+            working-directory: ./tools
 
       - name: Tests
         run: composer test
         timeout-minutes: 2
 
-  checks:
-    name: Checks
+  static-analyze:
+    name: Static Analyze
     strategy:
       matrix:
-        check: [ static-analyze, mutation-tests ]
         dependencies: [ locked ]
         php-version: [ 7.4 ]
         operating-system: [ ubuntu-latest ]
@@ -89,41 +69,54 @@ jobs:
         env:
           COMPOSER_TOKEN: ${{ secrets.PRIVATE_REPOSITORY_ACCESS }}
 
-      - name: Get Composer cache directory
-        id: composer-cache
-        run: |
-          echo ::set-output name=dir::$(composer config cache-files-dir)
-      - name: Cache Composer dependencies
-        uses: actions/cache@v2
+      - name: Install dependencies
+        uses: ramsey/composer-install@v2
         with:
-          path: |
-            ${{ steps.composer-cache.outputs.dir }}
-          key: php-${{ matrix.php-version }}-${{ matrix.dependencies }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            php-${{ matrix.php-version }}-${{ matrix.dependencies }}-composer-
+          dependency-versions: "${{ matrix.dependencies }}"
 
-      - name: Install lowest dependencies
-        if: ${{ matrix.dependencies == 'lowest' }}
-        run: composer update --prefer-lowest --no-interaction --no-progress --no-suggest
-
-      - name: Install highest dependencies
-        if: ${{ matrix.dependencies == 'highest' }}
-        run: composer update --no-interaction --no-progress --no-suggest
-
-      - name: Install locked dependencies
-        if: ${{ matrix.dependencies == 'locked' }}
-        run: composer install --no-interaction --no-progress --no-suggest
-
-      - name: Install tools
-        run: composer install --no-interaction --no-progress --no-suggest
-        working-directory: ./tools
+      - name: Install dependencies
+          uses: ramsey/composer-install@v2
+          with:
+            working-directory: ./tools
 
       - name: Static Analyze
-        if: ${{ matrix.check == 'static-analyze' }}
         run: composer static:analyze
         timeout-minutes: 2
 
-      - name: Mutation Tests
-        if: ${{ matrix.check == 'mutation-tests' }}
-        run: composer test:mutation
-        timeout-minutes: 2
+    mutation-tests:
+      name: Mutation Tests
+      strategy:
+        matrix:
+          dependencies: [ locked ]
+          php-version: [ 7.4 ]
+          operating-system: [ ubuntu-latest ]
+
+      runs-on: ${{ matrix.operating-system }}
+
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+
+        - name: Install PHP
+          uses: shivammathur/setup-php@v2
+          with:
+            coverage: pcov
+            tools: composer:v2
+            php-version: ${{ matrix.php-version }}
+            ini-values: memory_limit=-1
+          env:
+            COMPOSER_TOKEN: ${{ secrets.PRIVATE_REPOSITORY_ACCESS }}
+
+        - name: Install dependencies
+          uses: ramsey/composer-install@v2
+          with:
+            dependency-versions: "${{ matrix.dependencies }}"
+
+        - name: Install dependencies
+            uses: ramsey/composer-install@v2
+            with:
+              working-directory: ./tools
+
+        - name: Static Analyze
+          run: composer test:mutation
+          timeout-minutes: 2
