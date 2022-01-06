@@ -58,13 +58,16 @@ final class ArrayKeysStyleConverterTransformer implements Transformer
                 throw new RuntimeException("{$this->arrayEntryName} is not ArrayEntry but {$entryClass}");
             }
 
+            /**
+             * @phpstan-ignore-next-line
+             * @psalm-var pure-callable(string) : string $converter
+             */
+            $converter = fn (string $key) : string => (string) \call_user_func([new Convert($key), 'to' . \ucfirst($this->style)]);
+
             return $row->set(
                 $this->entryFactory->createEntry(
                     $arrayEntry->name(),
-                    (new ArrayKeyConverter(
-                        /** @phpstan-ignore-next-line */
-                        fn (string $key) : string => (string) \call_user_func([new Convert($key), 'to' . \ucfirst($this->style)])
-                    ))->convert($arrayEntry->value())
+                    (new ArrayKeyConverter($converter))->convert($arrayEntry->value())
                 )
             );
         };
