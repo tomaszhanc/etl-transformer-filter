@@ -18,6 +18,7 @@ jobs:
         include:
           - check: tests
             dependencies: [ lowest, highest ]
+            operating-system: ubuntu-latest
             php-version: 8.0
 
     runs-on: ${{ matrix.operating-system }}
