@@ -13,11 +13,15 @@ use Flow\ETL\Transformer\Filter\Filter;
 final class Callback implements Filter
 {
     /**
+     * @psalm-var pure-callable(Row) : bool
+     *
      * @var callable(Row) : bool
      */
     private $callback;
 
     /**
+     * @psalm-param pure-callable(Row $row) : bool $callback
+     *
      * @param callable(Row $row) : bool $callback
      */
     public function __construct(callable $callback)

@@ -10,11 +10,15 @@ namespace Flow\ETL\Transformer\StyleConverter;
 final class ArrayKeyConverter
 {
     /**
+     * @psalm-var pure-callable(string) : string
+     *
      * @var callable(string) : string
      */
     private $transformer;
 
     /**
+     * @psalm-param pure-callable(string) : string $transformer
+     *
      * @param callable(string) : string $transformer
      */
     public function __construct(callable $transformer)
