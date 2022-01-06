@@ -1,4 +1,4 @@
-name: Tests
+name: Quality Assurance
 
 on:
   pull_request:
@@ -7,24 +7,18 @@ on:
   schedule: [ { cron: '0 8 * * *' } ]
 
 jobs:
-  tests:
+  qa:
     name: Tests
     strategy:
       matrix:
-        dependencies: [ locked, lowest, highest ]
-        php-version: [ 7.4, 8.0 ]
-        operating-system: [ ubuntu-latest ]
-
-    services:
-      postgres:
-        image: postgres:11.2
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: postgres
-        ports:
-          - 5432/tcp
-        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+        check: [ tests, static analyze, mutation tests ]
+        dependencies: locked
+        php-version: 7.4
+        operating-system: ubuntu-latest
+        include:
+          check: tests
+          dependencies: [ lowest, highest ]
+          php-version: 8.0
 
     runs-on: ${{ matrix.operating-system }}
 
@@ -54,6 +48,7 @@ jobs:
           key: php-${{ matrix.php-version }}-${{ matrix.dependencies }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: |
             php-${{ matrix.php-version }}-${{ matrix.dependencies }}-composer-
+
       - name: Install lowest dependencies
         if: ${{ matrix.dependencies == 'lowest' }}
         run: composer update --prefer-lowest --no-interaction --no-progress --no-suggest
@@ -70,6 +65,17 @@ jobs:
         run: composer install --no-interaction --no-progress --no-suggest
         working-directory: ./tools
 
-      - name: Test
+      - name: Tests
+        if: ${{ matrix.check == 'tests' }}
         run: composer test
+        timeout-minutes: 2
+
+      - name: Static Analyze
+        if: ${{ matrix.check == 'static analyze' }}
+        run: composer static:analyze
+        timeout-minutes: 2
+
+      - name: Mutation Tests
+        if: ${{ matrix.check == 'mutation tests' }}
+        run: composer test:mutation
         timeout-minutes: 2
