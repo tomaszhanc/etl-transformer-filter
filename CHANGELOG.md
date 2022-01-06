@@ -65,6 +65,7 @@
 - [e858d0](https://github.com/flow-php/etl-transformer/commit/e858d0a9826dab8ff71a0fc4b14e5a92d72d44a8) - **RemoveEntriesTransformer** - [@norberttech](https://github.com/norberttech)
 
 ### Changed
+- [#149](https://github.com/flow-php/etl-transformer/pull/149) - **Merge QA workflows into one** - [@tomaszhanc](https://github.com/tomaszhanc)
 - [#83](https://github.com/flow-php/etl-transformer/pull/83) - **ConditionalTransformer returns Rows' flatMap now** - [@wojtekzymonik](https://github.com/wojtekzymonik)
 - [#82](https://github.com/flow-php/etl-transformer/pull/82) - **Renamed transformers** - [@DawidSajdak](https://github.com/DawidSajdak)
 - [#77](https://github.com/flow-php/etl-transformer/pull/77) - **Renamed Filter::__invoke into Filter::keep** - [@norberttech](https://github.com/norberttech)
@@ -95,6 +96,7 @@
 - [b9226c](https://github.com/flow-php/etl-transformer/commit/b9226c3294b434b532ce8ec38d3b6ccb27b53c0f) - **failing mutation test** - [@DawidSajdak](https://github.com/DawidSajdak)
 
 ### Updated
+- [759fb8](https://github.com/flow-php/etl-transformer/commit/759fb8ad881a8695afd6cc76f8fb668509155b05) - **CHANGELOG.md** - [@aeon-automation](https://github.com/aeon-automation)
 - [#147](https://github.com/flow-php/etl-transformer/pull/147) - **phpstan/phpstan from 1.3.0 to 1.3.1 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [#146](https://github.com/flow-php/etl-transformer/pull/146) - **vimeo/psalm from 4.16.1 to 4.17.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
 - [#145](https://github.com/flow-php/etl-transformer/pull/145) - **phpstan/phpstan from 1.2.0 to 1.3.0 in /tools** - [@dependabot[bot]](https://github.com/apps/dependabot)
