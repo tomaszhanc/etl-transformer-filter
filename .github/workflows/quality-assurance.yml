@@ -117,6 +117,6 @@ jobs:
         with:
           working-directory: ./tools
 
-      - name: Static Analyze
+      - name: Mutation Tests
         run: composer test:mutation
         timeout-minutes: 2
