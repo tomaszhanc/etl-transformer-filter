@@ -36,10 +36,10 @@ jobs:
         with:
           dependency-versions: ${{ matrix.dependencies }}
 
-      - name: Install dependencies
-          uses: ramsey/composer-install@v2
-          with:
-            working-directory: ./tools
+      - name: Install tools
+        uses: ramsey/composer-install@v2
+        with:
+          working-directory: ./tools
 
       - name: Tests
         run: composer test
@@ -74,10 +74,10 @@ jobs:
         with:
           dependency-versions: "${{ matrix.dependencies }}"
 
-      - name: Install dependencies
-          uses: ramsey/composer-install@v2
-          with:
-            working-directory: ./tools
+      - name: Install tools
+        uses: ramsey/composer-install@v2
+        with:
+          working-directory: ./tools
 
       - name: Static Analyze
         run: composer static:analyze
@@ -112,10 +112,10 @@ jobs:
           with:
             dependency-versions: "${{ matrix.dependencies }}"
 
-        - name: Install dependencies
-            uses: ramsey/composer-install@v2
-            with:
-              working-directory: ./tools
+        - name: Install tools
+          uses: ramsey/composer-install@v2
+          with:
+            working-directory: ./tools
 
         - name: Static Analyze
           run: composer test:mutation
