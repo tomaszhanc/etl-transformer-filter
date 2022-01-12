@@ -8,115 +8,16 @@ on:
 
 jobs:
   tests:
-    name: Tests
-    strategy:
-      matrix:
-        dependencies: [ locked, lowest, highest ]
-        php-version: [ 7.4 , 8.0 ]
-        operating-system: [ ubuntu-latest ]
-
-    runs-on: ${{ matrix.operating-system }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          coverage: pcov
-          tools: composer:v2
-          php-version: ${{ matrix.php-version }}
-          ini-values: memory_limit=-1
-        env:
-          COMPOSER_TOKEN: ${{ secrets.PRIVATE_REPOSITORY_ACCESS }}
-
-      - name: Install dependencies
-        uses: ramsey/composer-install@v2
-        with:
-          dependency-versions: ${{ matrix.dependencies }}
-
-      - name: Install tools
-        uses: ramsey/composer-install@v2
-        with:
-          working-directory: ./tools
-
-      - name: Tests
-        run: composer test
-        timeout-minutes: 2
+    name: "Tests"
+    uses: aeon-php/actions/.github/workflows/composer-script-test.yaml@main
 
   static-analyze:
-    name: Static Analyze
-    strategy:
-      matrix:
-        dependencies: [ locked ]
-        php-version: [ 7.4 ]
-        operating-system: [ ubuntu-latest ]
-
-    runs-on: ${{ matrix.operating-system }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          coverage: pcov
-          tools: composer:v2
-          php-version: ${{ matrix.php-version }}
-          ini-values: memory_limit=-1
-        env:
-          COMPOSER_TOKEN: ${{ secrets.PRIVATE_REPOSITORY_ACCESS }}
-
-      - name: Install dependencies
-        uses: ramsey/composer-install@v2
-        with:
-          dependency-versions: "${{ matrix.dependencies }}"
-
-      - name: Install tools
-        uses: ramsey/composer-install@v2
-        with:
-          working-directory: ./tools
-
-      - name: Static Analyze
-        run: composer static:analyze
-        timeout-minutes: 2
+    name: "Static Analyze"
+    uses: aeon-php/actions/.github/workflows/composer-script-static-analyze.yaml@main
 
   mutation-tests:
-    name: Mutation Tests
-    strategy:
-      matrix:
-        dependencies: [ locked ]
-        php-version: [ 7.4 ]
-        operating-system: [ ubuntu-latest ]
-
-    runs-on: ${{ matrix.operating-system }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          coverage: pcov
-          tools: composer:v2
-          php-version: ${{ matrix.php-version }}
-          ini-values: memory_limit=-1
-        env:
-          COMPOSER_TOKEN: ${{ secrets.PRIVATE_REPOSITORY_ACCESS }}
-
-      - name: Install dependencies
-        uses: ramsey/composer-install@v2
-        with:
-          dependency-versions: "${{ matrix.dependencies }}"
-
-      - name: Install tools
-        uses: ramsey/composer-install@v2
-        with:
-          working-directory: ./tools
-
-      - name: Mutation Tests
-        run: composer test:mutation
-        timeout-minutes: 2
+    name: "Mutation Tests"
+    uses: aeon-php/actions/.github/workflows/composer-script-mutation.yaml@main
+    secrets:
+      infection_badge_api_key: ${{ secrets.INFECTION_BADGE_API_KEY }}
+      stryker_dashboard_api_key: ${{ secrets.STRYKER_DASHBOARD_API_KEY }}
