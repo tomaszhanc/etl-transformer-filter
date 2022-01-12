@@ -2,7 +2,7 @@ name: Automation - Changelog Release
 
 on:
   push:
-    tags: [ * ]
+    tags: [ '*' ]
 
 jobs:
   automation:
